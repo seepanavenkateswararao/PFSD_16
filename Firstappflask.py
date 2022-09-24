@@ -36,6 +36,13 @@ def sample4(role):
     else:
         return redirect(url_for('sample3',name=role))
 
+#List Rendering with for tag
+@app.route("/list/rendering")
+def sample5():
+    lst=['abc','def','ghi']
+    return render_template('index3.html',name=lst)
+
+
 #main method
 if __name__=="__main__":
     app.run()
