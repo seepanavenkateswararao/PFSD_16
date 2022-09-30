@@ -2,14 +2,16 @@
 from flask import Flask,render_template,url_for,redirect
 
 #Create an instance (app)
-app=Flask("__name__")
+app=Flask(__name__)
 
 #Route (End Point)
 @app.route('/')
 
 #method defining
 def sample():
-    return "<h1>Welcome To Flask</h1>"
+    return "<h1>This is my First Preactice Website </h1> " \
+           "<button>sample1</button>"
+
 
 #dynamic Routing
 @app.route("/<name>")
@@ -42,24 +44,7 @@ def sample5():
     lst=['abc','def','ghi']
     return render_template('index3.html',name=lst)
 
-@app.route("/form/studentform")
-def sample6():
-    return render_template('studentform.html')
-
-#Flask - Form Handel
-@app.route("/form/example" , methods=('GET','POST'))
-def sample7():
-    if request.method=="POST":
-        name=request.form.get('stud_name')
-        number=request.form.get('stud_number')
-        return render_template('studentdetails.html',name=name,number=number)
-    else:
-        return "please view the form again"
-
-#Above so much incomplete----------------
 
 #main method
 if __name__=="__main__":
     app.run()
-
-
