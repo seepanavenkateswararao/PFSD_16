@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venkatesh's Bank </title>
+    <style>
+        .dropbtn {
+          background-color: #04AA6D;
+          color: white;
+          padding: 12px;
+          font-size: 16px;
+          border: none;
+          cursor: pointer;
+        }
+
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          right: 10;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #f1f1f1;}
+        .dropdown:hover .dropdown-content {display: block;}
+        .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+        .shadow{
+        color: rgb(0, 0, 0);
+        text-align: left;
+        width: 1268px;
+        height: 150px;
+        background-color: rgb(167, 167, 224);
+        box-shadow: rgb(219, 218, 220) 8px 2px 8px;
+        }
+        * {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+        </style>
+</head>
+<body style="background-color: rgb(167, 167, 224);">
+    <h3>Venkatesh's Bank <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bank" viewBox="0 0 16 16">
+        <path d="m8 0 6.61 3h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.38l.5 2a.498.498 0 0 1-.485.62H.5a.498.498 0 0 1-.485-.62l.5-2A.501.501 0 0 1 1 13V6H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 3h.89L8 0ZM3.777 3h8.447L8 1 3.777 3ZM2 6v7h1V6H2Zm2 0v7h2.5V6H4Zm3.5 0v7h1V6h-1Zm2 0v7H12V6H9.5ZM13 6v7h1V6h-1Zm2-1V4H1v1h14Zm-.39 9H1.39l-.25 1h13.72l-.25-1Z"/>
+      </svg> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A National Bank <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cash-coin" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0z"/>
+        <path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1h-.003zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195l.054.012z"/>
+        <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083c.058-.344.145-.678.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1H1z"/>
+        <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z"/>
+      </svg> </h3>
+      <hr size="1" width="100%" color="red">
+
+      <div class="dropdown" >
+        <button class="dropbtn">Services</button>
+        <div class="dropdown-content">
+          <a href="http://127.0.0.1:5500/index.html">Bank Payments</a>
+          <a href="#Internet bankings">Internet bankings</a>
+        </div>
+      </div>
+
+      <div class="dropdown" >
+        <button class="dropbtn">FAQ</button>
+        <div class="dropdown-content">
+          <a href="#Bank Payment Faq">Bank Payment Faq</a>
+          <a href="#Internet banking Faq">Internet banking Faq</a>
+          <a href="#Signup Faq">Signup Faq</a>
+        </div>
+      </div>
+
+      <div class="dropdown" >
+        <button class="dropbtn">Apply for Account</button>
+        <div class="dropdown-content">
+          <a href="#Apply Current Account">Apply Current Account</a>
+          <a href="#Apply Savings Bank Account">Apply Savings Bank Account</a>
+        </div>
+      </div>
+
+      <div class="dropdown" >
+        <button class="dropbtn">Apply For Loan</button>
+        <div class="dropdown-content">
+          <a href="#Apply Home Loan">Apply Home Loan</a>
+          <a href="#Apply Vehicle Loan">Apply Vehicle Loan</a>
+          <a href="#Apply Educational Loan">Apply Educational Loan</a>
+          <a href="#Apply Business Loan">Apply Business Loan</a>
+        </div>
+      </div>
+
+      <div class="dropdown" >
+        <button class="dropbtn">Offers</button>
+        <div class="dropdown-content">
+          <a href="#Mastercard">Mastercard</a>
+          <a href="#Visa">Visa</a>
+          <a href="#Rupay">Rupay</a>
+        </div>
+      </div>
+      <div class="dropdown" >
+        <button class="dropbtn">Corporate</button>
+        <div class="dropdown-content">
+          <a href="#Bullion Banking">Bullion Banking</a>
+          <a href="#Export Finance">Export Finance</a>
+          <a href="#Channel Credit">Channel Credit</a>
+          <a href="#Traders">Traders</a>
+          <a href="#Dual Currency Swing Limit">Dual Currency Swing Limit</a>
+          <a href="#Exporters Gold Card">Exporters Gold Card</a>
+        </div>
+      </div>
+      <div class="dropdown" >
+        <button class="dropbtn">NRI</button>
+        <div class="dropdown-content">
+          <a href="#NRI Information">NRI Information</a>
+          <a href="#NRI Queries">NRI Queries</a>
+          <a href="#NRO">NRO</a>
+          <a href="#Resident currency foriegn account">Resident currency foriegn account</a>
+          <a href="#Non-Resident currency foriegn account">Non-Resident currency foriegn account</a>
+          <a href="#NRI Remittances">NRI Remittances</a>
+        </div>
+      </div>
+      <div class="dropdown" >
+        <button class="dropbtn">Term Deposits</button>
+        <div class="dropdown-content">
+          <a href="#Term Deposits">Term Deposits</a>
+        </div>
+      </div>
+      <div class="dropdown" >
+        <button class="dropbtn">Fast Tag</button>
+        <div class="dropdown-content">
+          <a href="#Fast Tag">Fast Tag</a>
+        </div>
+      </div>
+      <div class="dropdown" >
+        <button class="dropbtn">Retail Products</button>
+        <div class="dropdown-content">
+          <a href="#Retail Products">Retail Products</a>
+        </div>
+      </div>
+      <div class="dropdown" >
+        <button class="dropbtn">Registration</button>
+        <div class="dropdown-content">
+          <a href="http://127.0.0.1:5000/signup">Signup </a>
+          <a href="http://127.0.0.1:5500/Login.html">Login</a>
+        </div>
+      </div>
+
+
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="/static/images/img1.jpg" style="width:100%">
+          <div class="text">Caption Text</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="/static/images/img2.jpg" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="/static/images/img3.jpg" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      <div class="shadow">
+       Contact Us<br>
+       General Enquiries:
+       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+      </svg>7730901271 (Tollfree) / 7287836271 (Tollfree - Covid Support) / 1212121212 (chargeable number) 24 X 7<br>
+      Locate Us:
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+      </svg><a href="#Search for Banks or Atm">Search for Banks or Atm</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+      </svg><a href="#Locate on map for bank or atm">Locate on map for bank or atm</a>
+      </div>
+      <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+        </script>
+</body>
+</html>

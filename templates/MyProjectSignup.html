@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+
+  <!--  adding font color via css-->
+  <style>
+    .textblock{
+  color:blue
+  }
+  img {
+    width: 150px;
+    float: left;
+    margin-right: -10px;
+  }
+  </style>
+</head>
+<body background="/static/images/bgimg.png">
+
+  <!-- adding image on web page by the tag img align -->
+    <img  align="top-left" src="/static/images/bankapp.png" , width="125px" , height="105px">
+
+<!-- adding text on background -->
+<div class="textblock">
+  <center><h1>Bank Account Registration Form</h1></center><br><br><br><br><br><br><br><br><br>
+
+    <!--  adding details in form-->
+    <form action="http://localhost:5000/successfull" method="POST">
+       <big> &emsp;&emsp;&emsp;First name  &emsp; &emsp; &emsp;<input type="text" name="fn"><br><br><br></big>
+        <big>&emsp;&emsp;&emsp;Last  name  &emsp; &emsp; &emsp;<input type="text" name="ln"><br><br><br></big>
+        <big>&emsp;&emsp;&emsp;Date of Birth &emsp;&emsp; <input type="date" name="dob"></big><br><br><br>
+        <big>&emsp;&emsp;&emsp;Aadhar Number &nbsp;&nbsp;&nbsp; <input type="number" id="adno" required></big><br><br><br><br>
+        <big>&emsp;&emsp;&emsp;PAN Number &emsp; &nbsp;&nbsp;&nbsp;<input type="text" id="pan" required><br><br><br></big></big>
+        <big> &emsp;&emsp;&emsp;Father name  &emsp; &nbsp;&nbsp;&nbsp;<input type="text" name="fathname"><br><br><br></big>
+        <big>&emsp;&emsp;&emsp;Mother name  &emsp;&nbsp;&nbsp; <input type="text" id="mname"><br><br><br></big>
+         <big>&emsp;&emsp;&emsp;<font face="Times New Roman " >Gender&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;: <br></font><br>
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="radio"name="gm"value="Male";>Male<br><br><br>
+             &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="radio"name="fg"value="Female">Female<br><br></big>
+        <big>&emsp;&emsp;&emsp;Mobile Number</big>&emsp;&nbsp;&nbsp; <input type="number" name="mbno"> <br><br><br>
+        <big>&emsp;&emsp;&emsp;Email</big>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;<input type="email" name="mail"><br><br><br>
+        <big>&emsp;&emsp;&emsp;Address&emsp;&emsp;<br><br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Street Address&emsp;&emsp;&emsp;&nbsp;<input type="text" name="faddress">
+        &emsp;&emsp;&emsp;&emsp;&emsp;City&emsp;&emsp;&emsp;<input type="text" name="fcity"><br><br>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;State&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="fstate" name="state">
+        &emsp;&emsp;&emsp;&emsp;&emsp;Country&nbsp;&emsp;&nbsp;<input type="text" name="fcountry">
+        <br><br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Zipcode&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+            <input type="number" name="zipcode"></big>
+        <br><br><br><center><button type="submit">Submit</button></center>
+
+    </form>
+</div>
+</body>
+</html>
